@@ -19,7 +19,8 @@
                  <p class="text-white h2">PILIH CEPAT</p>
                 </div>
                 <div class="col">
-                    <button type="button" style="width:150px;" class="btn btn-outline-light btn-lg">Login</button>
+                    <a href="<?= base_url('/login')?>" style="width:150px;" class="btn btn-outline-light btn-lg" >Login</a>
+                  
                 </div>
             </div>
         </div>
