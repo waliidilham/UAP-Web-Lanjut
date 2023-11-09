@@ -10,4 +10,8 @@ class Petugas extends BaseController
     {
         return view('petugas/index');
     }
+    public function tambah()
+    {
+        return view('petugas/tambah_data');
+    }
 }
