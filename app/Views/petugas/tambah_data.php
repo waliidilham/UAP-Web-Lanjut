@@ -226,63 +226,20 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <!-- <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-dark shadow-sm"
-                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
-                Report</a
-              > -->
+                 <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">Tabel Data Pemilihan</h1>
             </div>
-
             <!-- Content Row -->
-            <!-- <div class="row">
-             
-             
-              
-
-             
-             
-
-              
-
-              
-                        
-
-            <!-- Content Row -->
-           
-                            
-              
-                       
-                                
-
-            <div class="row">               
+            <div class="row">       
               <div class="col-lg-12 mb-4">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-dark">Tabel  Data Pemilihan </h6>
-                        <div class="dropdown no-arrow">
-                          <a
-                            class="dropdown-toggle"
-                            href="#"
-                            role="button"
-                            id="dropdownMenuLink"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            <i
-                              class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                            ></i>
-                          </a>
-                          <div
-                            class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                            aria-labelledby="dropdownMenuLink"
-                          >
-                            <div class="dropdown-header">Pilih:</div>
-                            <a class="dropdown-item" href="<?= base_url('/admin/pengembalian')?>">Lihat Selengkapnya</a>
-                          </div>
-                        </div>
+                        <h6 class="m-0 font-weight-bold text-dark">Tambah Data Warga</h6>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive">
@@ -292,43 +249,11 @@
                             width="100%"
                             cellspacing="0"
                           >
-                            <thead>
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Nama Pemilih</th>
-                                    <th>No Urut Dipilih</th> 
-                                    <th>Status Pemilihan</th>            
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>1.</td>
-                                  <td>Adinda</td>
-                                  <td>1</td> 
-                                  <td> 
-                                    <i class="tombol-ijo">Valid </i> 
-                                </td>                                                                                                                                       
-                                </tr>  
-                                
-                                <tr>
-                                  <td>2.</td>
-                                  <td>walid</td>
-                                  <td>2</td> 
-                                  <td> 
-                                    <i class="tombol-ijo">Valid </i> 
-                                </td>          
-                                </tr>  
-
-                                <tr>
-                                  <td>3.</td>
-                                  <td>Faiz</td>
-                                  <td>1</td> 
-                                  <td> 
-                                    <i class="tombol-ijo">Valid </i> 
-                                </td>          
-                                </tr>  
-
-                            </tbody>
+                          <tr>    
+                                  <td>
+                                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Tambahkan Data</button>
+                                  </td>                                                                                                                               
+                                </tr>                                                                                
                         </table>
                       </div>
                     </div>  
@@ -336,19 +261,12 @@
               </div>
             </div>
 
-    
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <!-- <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Sneakers e-Commerce 2023</span>
-            </div>
-          </div>
-        </footer> -->
+       
         <!-- End of Footer -->
       </div>
       <!-- End of Content Wrapper -->
@@ -361,8 +279,83 @@
     </a>
 
     <!-- Logout Modal-->
-   
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-dark" href="../logout.php">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data warga</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <div class="container mx-auto px-5 mt-1" style="margin-bottom: 100px !important;">
+                <div class="mb-3">
+                <form action="" method="post">
+                    <label class="col-form-label fw-bold text-dark">NIK</label>
+                    <input type="text" class="form-control" id="nik" name="nik">
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label fw-bold text-dark">Nama warga</label>
+                    <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label fw-bold text-dark">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
+                <button type="submit" class="btn btn-success">Kirim</button>
+                </form>
+           </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
     <!-- Bootstrap core JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
     <script src="<?=base_url('assets/vendor/jquery/jquery.min.js')?>"></script>
     <script src="<?=base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 
@@ -373,10 +366,10 @@
     <script src="<?=base_url('assets/js/sb-admin-2.min.js')?>"></script>
 
     <!-- Page level plugins -->
-    <script src="<?=base_url('assets/vendor/chart.js/Chart.min.js')?>"></script>
+    <script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js')?>"></script>
+    <script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js')?>"></script>
 
     <!-- Page level custom scripts -->
-    <script src="<?=base_url('assets/js/demo/chart-area-demo.js')?>"></script>
-    <script src="<?=base_url('assets/js/demo/chart-pie-demo.js')?>"></script>
+    <script src="<?= base_url('assets/js/demo/datatables-demo.js')?>"></script>    
   </body>
 </html>

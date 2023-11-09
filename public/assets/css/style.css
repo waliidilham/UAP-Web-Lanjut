@@ -90,3 +90,27 @@ body {
 .title{
 	margin-top: 130px;
 }
+
+.tombol-ijo {
+	background: #22bb6d;
+	color: white;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 4px solid #22bb6d;
+	border-radius: 5px;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 11pt;
+	margin: 10px;
+  }
+  .tombol-ijo:hover {
+	background: #22bb6d;
+	color: white;
+	border-radius: 5px;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 11pt;
+  }
