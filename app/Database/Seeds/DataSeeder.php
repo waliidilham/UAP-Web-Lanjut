@@ -8,8 +8,12 @@ class DataSeeder extends Seeder
 {
     public function run()
     {
-        $this->call('UsersSeeder');
-        $this->call('AuthGroups');
-        $this->call('AuthGroupUsers');
+        // $this->call('UsersSeeder');
+        // $this->call('AuthGroups');
+        // $this->call('AuthGroupUsers');
+        $this->call('CalonSeeder');
+
+        $this->call('TpsSeeder');
+        $this->call('PemiluSeeder');
     }
 }
