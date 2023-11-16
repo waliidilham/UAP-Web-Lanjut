@@ -10,4 +10,12 @@ class Admin extends BaseController
     {
         return view('admin/index');
     }
+    public function petugas()
+    {
+        return view('admin/petugas');
+    }
+    public function pemilih()
+    {
+        return view('admin/pemilih');
+    }
 }
