@@ -14,3 +14,5 @@ $routes->get('/pemilih', [Pemilih::class, 'index'], ['filter' => 'role:pemilih']
 $routes->get('/admin', [Admin::class, 'index'], ['filter' => 'role:administrator']);
 $routes->get('/petugas', [Petugas::class, 'index'], ['filter' => 'role:petugas']);
 $routes->get('/tambah_data', [Petugas::class, 'tambah']);
+$routes->get('/admin/petugas', [Admin::class, 'petugas'], ['filter' => 'role:administrator']);
+$routes->get('/admin/pemilih', [Admin::class, 'pemilih'], ['filter' => 'role:administrator']);
