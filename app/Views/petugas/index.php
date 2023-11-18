@@ -53,16 +53,9 @@
       <!-- Nav Item - Product -->
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url('/tambah_data') ?>">
-
-          <span>Data Pemilihan</span></a>
+          <span>Data Warga</span></a>
       </li>
 
-      <!-- <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/login') ?>">
-           
-            <span>Keluar</span></a
-          >
-        </li> -->
 
 
 
@@ -70,9 +63,6 @@
       <hr class="sidebar-divider d-none d-md-block" />
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
     </ul>
     <!-- End of Sidebar -->
 
@@ -131,20 +121,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="<?= base_url('/logout') ?>" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -166,6 +143,28 @@
                 Report</a
               > -->
           </div>
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Select "Logout" below if you are ready to end your current session.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                    Cancel
+                  </button>
+                  <a class="btn btn-dark" href="<?= base_url('/logout') ?>">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-lg-12 mb-4">
               <div class="card shadow mb-4">
@@ -239,6 +238,7 @@
 
     <!-- Logout Modal-->
 
+
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
     <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
@@ -250,11 +250,11 @@
     <script src="<?= base_url('assets/js/sb-admin-2.min.js') ?>"></script>
 
     <!-- Page level plugins -->
-    <script src="<?= base_url('assets/vendor/chart.js/Chart.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>
 
     <!-- Page level custom scripts -->
-    <script src="<?= base_url('assets/js/demo/chart-area-demo.js') ?>"></script>
-    <script src="<?= base_url('assets/js/demo/chart-pie-demo.js') ?>"></script>
+    <script src="<?= base_url('assets/js/demo/datatables-demo.js') ?>"></script>
 </body>
 
 </html>
