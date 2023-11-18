@@ -37,4 +37,12 @@ class TpsModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function getTps($id = null)
+    {
+        if ($id != null) {
+            return $this->select('tps.*')
+                ->find($id);
+        }
+        return $this->findAll();
+    }
 }

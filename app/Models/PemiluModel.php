@@ -44,4 +44,8 @@ class PemiluModel extends Model
             ->join('calon', 'calon.id=pemilu.id_paslon')
             ->join('tps', 'tps.id=pemilu.id_tps')->findAll();
     }
+    public function savePemilu($data)
+    {
+        $this->insert($data);
+    }
 }

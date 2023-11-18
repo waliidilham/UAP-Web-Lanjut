@@ -10,11 +10,11 @@ class Home extends BaseController
     {
         if (logged_in()) {
             if (in_groups('administrator')) {
-                return view('admin/index');
+                return redirect()->to(base_url('/admin'));
             } else if (in_groups('petugas')) {
-                return view('petugas/index');
+                return redirect()->to(base_url('/petugas'));
             } else if (in_groups('pemilih')) {
-                return view('pemilih/index');
+                return redirect()->to(base_url('/pemilih'));
             }
         } else {
             return view('landing_page');

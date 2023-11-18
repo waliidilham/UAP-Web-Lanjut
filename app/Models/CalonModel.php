@@ -12,7 +12,7 @@ class CalonModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama', 'tanggal_lahir', 'visi', 'misi'];
+    protected $allowedFields    = ['nama', 'tanggal_lahir', 'visi', 'misi', 'foto'];
 
     // Dates
     protected $useTimestamps = true;
@@ -37,4 +37,8 @@ class CalonModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function getCalon()
+    {
+        return $this->findAll();
+    }
 }

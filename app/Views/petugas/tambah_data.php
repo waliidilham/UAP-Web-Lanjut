@@ -53,25 +53,13 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url('/tambah_data') ?>">
 
-          <span>Data Pemilihan</span></a>
+          <span>Data Warga</span></a>
       </li>
-
-      <!-- <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/login') ?>">
-           
-            <span>Keluar</span></a
-          >
-        </li> -->
-
-
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block" />
 
       <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
     </ul>
     <!-- End of Sidebar -->
 
@@ -130,19 +118,6 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -161,7 +136,7 @@
             <div class="container-fluid">
               <!-- Page Heading -->
               <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Tabel Data Pemilihan</h1>
+                <h1 class="h3 mb-0 text-gray-800">Tabel Data Warga</h1>
               </div>
               <!-- Content Row -->
               <div class="row">
@@ -219,7 +194,7 @@
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">
                   Cancel
                 </button>
-                <a class="btn btn-dark" href="../logout.php">Logout</a>
+                <a class="btn btn-dark" href="<?= base_url('/logout') ?>">Logout</a>
               </div>
             </div>
           </div>
@@ -256,6 +231,19 @@
                       <label class="col-form-label fw-bold text-dark">Tanggal Lahir</label>
                       <input type="date" class="form-control" id="tgl_lahir" name="password">
                     </div>
+
+                    <div class="mb-3">
+                      <label class="col-form-label fw-bold text-dark">Tempat Pemungutan Suara</label>
+                      <select class="form-control" aria-label="Default select example" name="id_tps">
+                        <option value="" selected disabled>Pilih TPS</option>
+                        <?php
+                        foreach ($tps as $item) {
+                        ?>
+                          <option value="<?= $item['id'] ?>"><?= $item['nama_tps'] ?></option>
+                        <?php } ?>
+                      </select>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kembali</button>
