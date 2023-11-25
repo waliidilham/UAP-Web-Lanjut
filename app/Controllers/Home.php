@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CalonModel;
 use Config\View;
 
 class Home extends BaseController
@@ -17,7 +18,12 @@ class Home extends BaseController
                 return redirect()->to(base_url('/pemilih'));
             }
         } else {
-            return view('landing_page');
+            $calonModel = new CalonModel();
+            $calon = $calonModel->getCalon();
+            $data  = [
+                'calon' => $calon,
+            ];
+            return view('landing_page', $data);
         }
     }
 }
