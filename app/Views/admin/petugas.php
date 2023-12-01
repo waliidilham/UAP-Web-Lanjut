@@ -61,14 +61,14 @@
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>User</span>
                 </a>
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item active" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                     
+                    <a class="collapse-item" href="<?= base_url('/admin/petugas')?>">Petugas</a>
+                        <a class="collapse-item" href="<?= base_url('/admin/pemilih')?>">Pemilih</a>
                     </div>
                 </div>
             </li>
@@ -225,7 +225,7 @@
 
                     <div class="row">
 
-                        <div class="col-lg-7">
+                        <div class="col-lg-9">
 
                             <!-- Circle Buttons -->
                             <div class="card shadow mb-4">
@@ -235,7 +235,10 @@
                                 <div class="card-body">
 
                                 <div>
-                                    <button class="btn btn-success  ">Tambah Data</button>
+                                    <a href="<?= base_url('/admin/tambah-petugas')?>">
+                                        <button class="btn btn-success  ">Tambah Data</button>
+                                    </a>
+                                    
                                 </div>
                                 <table class="table table-striped" style="margin-top: 20px;">
                                             <thead>
@@ -244,6 +247,8 @@
                                                 <th scope="col">Nama</th>
                                                 <th scope="col">Asal</th>
                                                 <th scope="col">NIK</th>
+                                                <th scope="col">Foto Profile</th>
+
                                                 
                                               </tr>
                                             </thead>
@@ -253,8 +258,9 @@
                                                 <td>Faiz Muzaki</td>
                                                 <td>Bandar Lampung </td>
                                                 <td>1972012305010098</td>
+                                                <td>img-1</td>
                                                 <th scope="col">
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-petugas')?>">Edit</a>
                                                     <button class="btn btn-danger">Delete</button>
                                                 </th>
                                               </tr>
@@ -263,8 +269,9 @@
                                                 <td>Adinda</td>
                                                 <td>Lampung Tengah</td>
                                                 <td>1772112307030001</td>
+                                                <td>img-1</td>
                                                 <th scope="col">
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-petugas')?>">Edit</a>
                                                     <button class="btn btn-danger">Delete</button>
                                                 </th>
                                               </tr>
@@ -273,8 +280,9 @@
                                                 <td colspan="">Waliidd</td>
                                                 <td>Metro</td>
                                                 <td>1872011304010138</td>
+                                                <td>img-1</td>
                                                 <th scope="col">
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-petugas')?>">Edit</a>
                                                     <button class="btn btn-danger">Delete</button>
                                                 </th>
                                               </tr>
@@ -287,9 +295,9 @@
 
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-3">
 
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-2">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6  >
                                 </div>

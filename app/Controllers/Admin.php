@@ -18,4 +18,20 @@ class Admin extends BaseController
     {
         return view('admin/pemilih');
     }
+    public function edit_pemilih()
+    {
+        return view('admin/edit-pemilih');
+    }
+    public function edit_petugas()
+    {
+        return view('admin/edit-petugas');
+    }
+    public function tambah_petugas()
+    {
+        return view('admin/tambah-petugas');
+    }
+    public function tambah_pemilih()
+    {
+        return view('admin/tambah-pemilih');
+    }
 }

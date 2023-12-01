@@ -20,3 +20,7 @@ $routes->get('/petugas', [Petugas::class, 'index'], ['filter' => 'role:petugas']
 $routes->get('/tambah_data', [Petugas::class, 'tambah']);
 $routes->get('/admin/petugas', [Admin::class, 'petugas'], ['filter' => 'role:administrator']);
 $routes->get('/admin/pemilih', [Admin::class, 'pemilih'], ['filter' => 'role:administrator']);
+$routes->get('/admin/edit-pemilih', [Admin::class, 'edit_pemilih'], ['filter' => 'role:administrator']);
+$routes->get('/admin/edit-petugas', [Admin::class, 'edit_petugas'], ['filter' => 'role:administrator']);
+$routes->get('/admin/tambah-pemilih', [Admin::class, 'tambah_pemilih'], ['filter' => 'role:administrator']);
+$routes->get('/admin/tambah-petugas', [Admin::class, 'tambah_petugas'], ['filter' => 'role:administrator']);
