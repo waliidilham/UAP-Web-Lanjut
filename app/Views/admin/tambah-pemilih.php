@@ -61,12 +61,13 @@
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Users</span>
+                    <span>User</span>
                 </a>
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?= base_url('/admin/petugas')?>">Petugas</a>
+                     
+                    <a class="collapse-item" href="<?= base_url('/admin/petugas')?>">Petugas</a>
                         <a class="collapse-item" href="<?= base_url('/admin/pemilih')?>">Pemilih</a>
                     </div>
                 </div>
@@ -229,98 +230,50 @@
                             <!-- Circle Buttons -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pemilih</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Petugas</h6>
                                 </div>
                                 <div class="card-body">
 
-                                <div>
-                                    <a href="<?= base_url('/admin/tambah-pemilih')?>">
-                                        <button class="btn btn-success " >Tambah Data</button>
-                                     </a>
-                                    
-                                </div>
-                                <table class="table table-striped" style="margin-top: 20px;">
-                                            <thead>
-                                              <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">Nama</th>
-                                                <th scope="col">Asal</th>
-                                                <th scope="col">NIK</th>
-                                                <th scope="col">No KK</th>
-                                                <th scope="col">Foto</th>
-                                                
-                                                
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                <th scope="row">1</th>
-                                                <td>Faiz Muzaki</td>
-                                                <td>Bandar Lampung </td>
-                                                <td>1972012305010098</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">2</th>
-                                                <td>Adinda</td>
-                                                <td>Lampung Tengah</td>
-                                                <td>1772112307030001</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                     <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">3</th>
-                                                <td colspan="">Waliidd</td>
-                                                <td>Metro</td>
-                                                <td>1872011304010138</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                </div>
+                                
+                                  <div class="mb-3 row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Nama</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" id="inputPassword">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Asal</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" id="inputPassword">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">NIK</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" id="inputPassword">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">No KK</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" id="inputPassword">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="formFile" class="form-label">Upload Images</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                  </div>
+                                  
+
+                              </div>
+                                  <div style="margin-left:20px; margin-bottom:20px;">
+                                    <a href="#" class="btn btn-success">
+                                        Tambah Data
+                                    </a>
+                                  </div>
                             </div>
 
                            
-
-                        </div>
-
-                        <div class="col-lg-5">
-
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Data Pemilih</h6  >
-                                </div>
-                                <div class="card-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Pemilih Total
-                                        <span class="badge bg-primary rounded-pill text-light">1114</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Daerah Asal
-                                        <span class="badge bg-primary rounded-pill text-light">15</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Terlaksana
-                                        <span class="badge bg-primary rounded-pill text-light"></span>
-                                    </li>
-                                    </ul>
-                                   
-                            </div>
 
                         </div>
 
