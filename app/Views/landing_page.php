@@ -107,7 +107,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tentang Kepala Desa</h2>
                     <br>
-                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+                  
                 </div>
                 <ul class="timeline">
                     <?php
@@ -138,42 +138,7 @@
                         $is_inverted = !$is_inverted;
                     }
                     ?>
-                    <!-- <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/tentang2.jpeg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2020</h4>
-                                <h4 class="subheading">Sukma Prajandanu</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Sukma Prajandanu merupakan Mantan Kepala Desa Tahun 2020 menjabat selama 1 tahun dan memiliki kinerja yang sangat disukai oleh para warga karna sangat ramah dan memiliki wibawa yang sangat bagus</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/tentang3.jpeg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2021</h4>
-                                <h4 class="subheading">Andika Dani</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Andika Dani merupakan Mantan Kepala Desa Tahun 2021 menjabat selama 1 tahun dan memiliki </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/tentang4.jpeg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2022</h4>
-                                <h4 class="subheading">Abdan Syakuro</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted"> Abdan Syakuro merupakan Mantan Kepala Desa Tahun 2022 menjabat selama 1 tahun dan </p>
-                            </div>
-                        </div>
-                    </li> -->
+                  
                 </ul>
             </div>
         </section>
