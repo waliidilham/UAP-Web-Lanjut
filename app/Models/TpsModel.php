@@ -45,4 +45,8 @@ class TpsModel extends Model
         }
         return $this->findAll();
     }
+    public function deleteTps($id)
+    {
+        return $this->delete($id);
+    }
 }

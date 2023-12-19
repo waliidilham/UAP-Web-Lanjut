@@ -1,388 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$this->extend('admin/layout/app');
+$this->section('content');
+?>
 
-<head>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800"> Data Pemilih</h1>
 
-    <title>SB Admin 2 - Petugas</title>
+    <div class="row">
 
-    <!-- Custom fonts for this template-->
+        <div class="col-lg-9">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-        <link href=<?= base_url('assets/css/sb-admin-2.min.css')?> rel="stylesheet">
-    <link href=<?= base_url('assets/css/sb-admin-2.css')?> rel="stylesheet">
-    <link href=<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?> rel="stylesheet" type="text/css">
-
-
-</head>
-
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                
-                <div class="sidebar-brand-text mx-3">E-Voting</div>
-            </a>
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href=<?= base_url('admin/') ?>>
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                    aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Users</span>
-                </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?= base_url('/admin/petugas')?>">Petugas</a>
-                        <a class="collapse-item" href="<?= base_url('/admin/pemilih')?>">Pemilih</a>
-                    </div>
+            <!-- Circle Buttons -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Pemilih</h6>
                 </div>
-            </li>
+                <div class="card-body">
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                        Tambah Data
                     </button>
 
-                    <!-- Topbar Search -->
-                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Pemilih</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?= url_to('register') ?>" method="post">
+                                        <?= csrf_field() ?>
+                                        <div class="form-group">
+                                            <label for="namapemilih" class="col-form-label">Username</label>
+                                            <div class="">
+                                                <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="NIK" value="<?= old('username') ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="emailpemilih" class="col-form-label">Email</label>
+                                            <div class="">
+                                                <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="passwordpemilih" class="col-form-label">Password</label>
+                                            <div class="">
+                                                <input name="password" type="password" class="form-control" id="passwordpemilih" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                                            <label class="col-form-label">Tempat Pemungutan Suara</label>
+                                            <select class="form-control" aria-label="Default select example" name="id_tps">
+                                                <option value="" selected disabled>Pilih TPS</option>
+                                                <?php
+                                                foreach ($tps as $item) {
+                                                ?>
+                                                    <option value="<?= $item['id'] ?>"><?= $item['nama_tps'] ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            
-                        </li>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <input type="submit" class="btn btn-primary" name="submit" value="Tambah Data">
+                                        </div>
+                                    </form>
 
-                        <!-- Nav Item - Alerts -->
-                        
-                       
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
+                                </div>
                             </div>
-                        </li>
+                        </div>
+                    </div>
+                    <table class="table table-striped" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">TPS</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $no = 1;
+                            foreach ($pemilih as $pemilih) {
+                            ?>
+                                <tr>
+                                    <th class="align-middle" scope="row"><?= $no++ ?></th>
+                                    <td class="align-middle"><?= $pemilih['username'] ?></td>
+                                    <td class="align-middle"><?= $pemilih['email'] ?></td>
+                                    <td class="align-middle"><?= $pemilih['nama_tps'] ?></td>
+                                    <td class="align-middle"><img src="<?= $pemilih['foto'] ?>" alt="" class="rounded-circle" style="width: 50px; height: 50px;"></td>
+                                    <td style="display: flex;" class="align-middle">
 
+                                        <a href="" class="btn btn-primary px-3 mb-0" data-toggle="modal" data-target="#modal<?= $pemilih['id']; ?>">Edit</a>
+                                        <div class="modal fade" id="modal<?= $pemilih['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="POST" action="<?= base_url('admin/pemilih/' . $pemilih['id']) ?>" enctype="multipart/form-data">
+                                                            <input type="hidden" name="_method" value="PUT">
+                                                            <?= csrf_field() ?>
+                                                            <div class="text-center">
+                                                                <img src="<?= $pemilih['foto'] ?>" class="rounded-circle img-fluid" style="object-fit: cover; width: 100px; height: 100px;">
+                                                                <div class="scvgOW">
+                                                                    <label class="d-flex flex-column align-items-center">
+                                                                        <input name="fotopemilih" id="gambarInput" class="bMWDYw" type="file" style="opacity: 0;">
+                                                                        <span class="btn btn-secondary">Pilih gambar</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="namapemilih" class="col-form-label">Username</label>
+                                                                <div class="">
+                                                                    <input type="text" name="usernamepemilih" class="form-control" id="namapemilih" value="<?= $pemilih['username'] ?>">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="emailpemilih" class="col-form-label">Email</label>
+                                                                <div class="">
+                                                                    <input type="email" name="emailpemilih" class="form-control" id="emailpemilih" value="<?= $pemilih['email'] ?>">
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-right">
+                                                                <button type="submit" name="save" class="btn btn-outline-success mt-2 mb-1">Save Changes</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="" class="btn btn-danger px-3 mb-0 ml-1" data-toggle="modal" data-target="#modall<?= $pemilih['id']; ?>">Delete</a>
+                                        <div class="modal fade" id="modall<?= $pemilih['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-md">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <p>Apakah anda yakin menghapus user <?= $pemilih['username']; ?>?</p>
+                                                        </div>
+
+                                                        <div class="text-right">
+                                                            <form action="<?= base_url('admin/user/' . $pemilih['id']) ?>" method="POST">
+                                                                <input type="hidden" name="_method" value="DELETE">
+                                                                <?= csrf_field() ?>
+                                                                <button class="btn btn-danger text-white mb-0" style="color: red;">
+                                                                    <i class="fas fa-trash text-white me-2" aria-hidden="true"></i>
+                                                                    Delete
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card shadow mb-2">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Data Pemilih</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Pemilih Total
+                            <span class="badge bg-primary rounded-pill text-light"><?= count($countPemilih) ?></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Daerah Asal
+                            <span class="badge bg-primary rounded-pill text-light"><?= count($countDaerahAsal) ?></span>
+                        </li>
                     </ul>
 
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800"> Data Pemilih</h1>
-
-                    <div class="row">
-
-                        <div class="col-lg-12">
-
-                            <!-- Circle Buttons -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pemilih</h6>
-                                </div>
-                                <div class="card-body">
-
-                                <div>
-                                    <a href="<?= base_url('/admin/tambah-pemilih')?>">
-                                        <button class="btn btn-success " >Tambah Data</button>
-                                     </a>
-                                    
-                                </div>
-                                <table class="table table-striped" style="margin-top: 20px;">
-                                            <thead>
-                                              <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">Nama</th>
-                                                <th scope="col">Asal</th>
-                                                <th scope="col">NIK</th>
-                                                <th scope="col">No KK</th>
-                                                <th scope="col">Foto</th>
-                                                
-                                                
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                <th scope="row">1</th>
-                                                <td>Faiz Muzaki</td>
-                                                <td>Bandar Lampung </td>
-                                                <td>1972012305010098</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">2</th>
-                                                <td>Adinda</td>
-                                                <td>Lampung Tengah</td>
-                                                <td>1772112307030001</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                     <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">3</th>
-                                                <td colspan="">Waliidd</td>
-                                                <td>Metro</td>
-                                                <td>1872011304010138</td>
-                                                <td>1972012305010098</td>
-                                                <td>Img_1121</td>
-                                                <th scope="col">
-                                                    <a class="btn btn-primary" href="<?= base_url('/admin/edit-pemilih')?>">Edit</a>
-                                                    <button class="btn btn-danger">Delete</button>
-                                                </th>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                </div>
-                            </div>
-
-                           
-
-                        </div>
-
-                        <div class="col-lg-5">
-
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Data Pemilih</h6  >
-                                </div>
-                                <div class="card-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Pemilih Total
-                                        <span class="badge bg-primary rounded-pill text-light">1114</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Daerah Asal
-                                        <span class="badge bg-primary rounded-pill text-light">15</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Terlaksana
-                                        <span class="badge bg-primary rounded-pill text-light"></span>
-                                    </li>
-                                    </ul>
-                                   
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
-                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top:50px;">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; E-Voting 2023</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
-        <!-- End of Content Wrapper -->
 
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- /.container-fluid -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+</div>
+<!-- End of Main Content -->
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-</body>
-
-</html>
+<?= $this->endSection(); ?>

@@ -41,4 +41,12 @@ class CalonModel extends Model
     {
         return $this->findAll();
     }
+    public function updateCalon($id, $data)
+    {
+        $this->update($id, $data);
+    }
+    public function deleteCalon($id)
+    {
+        return $this->delete($id);
+    }
 }

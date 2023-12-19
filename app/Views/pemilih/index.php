@@ -111,7 +111,7 @@
                     <label>
                         <img src="<?= $calon['foto'] ?>" alt="Gambar 1" width="130" height="160">
                         <span><?= $calon['nama'] ?></span>
-                        <span>Nomor Urut <?= $calon['id'] ?></span>
+                        <span>Nomor Urut <?= $no++ ?></span>
                         <input type="radio" name="paslon" value="<?= $calon['id'] ?>">
                     </label>
                 <?php } ?>
