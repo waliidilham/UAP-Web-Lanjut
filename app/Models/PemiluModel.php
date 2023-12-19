@@ -48,4 +48,11 @@ class PemiluModel extends Model
     {
         $this->insert($data);
     }
+    public function countPemilu()
+    {
+        return $this->select('COUNT(pemilu.id) AS surat_suara, tps.nama_tps')
+            ->join('tps', 'tps.id=pemilu.id_tps')
+            ->groupBy('pemilu.id_tps')
+            ->findAll();
+    }
 }
